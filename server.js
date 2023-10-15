@@ -5,6 +5,7 @@ import cors from "cors";
 import bodyParser from 'body-parser';
 import StudentRouter from "./routers/StudentRoute.js";
 import RequestRouter from "./routers/RequestRoute.js";
+import AdminRouter from "./routers/adminRoute.js";
 
 dotenv.config();
 
@@ -29,6 +30,7 @@ mongoose.connect('mongodb+srv://user:user@cluster0.wekkhaa.mongodb.net/?retryWri
 app.use(cors());
 app.use("/api/students", StudentRouter);
 app.use("/api/requests", RequestRouter);
+app.use("/api/admins",  AdminRouter);
 
 
 app.get("/", (req, res) => {

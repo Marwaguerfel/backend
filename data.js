@@ -13,6 +13,17 @@ const data = {
     },
   
   ],
+  admins: [
+    {
+      firstName: 'marwa',
+      lastName:'guerfel',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('1234', 8),
+      grade:"grade"
+
+    },
+  
+  ],
   requests: [
     {
       subject: 'subject',
