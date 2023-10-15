@@ -7,6 +7,7 @@ import StudentRouter from "./routers/StudentRoute.js";
 import RequestRouter from "./routers/RequestRoute.js";
 import AdminRouter from "./routers/adminRoute.js";
 import ReclamationRouter from "./routers/reclamationRoute.js";
+import CertifRouter from "./routers/certifRoute.js";
 
 dotenv.config();
 
@@ -33,6 +34,8 @@ app.use("/api/students", StudentRouter);
 app.use("/api/requests", RequestRouter);
 app.use("/api/admins",  AdminRouter);
 app.use("/api/reclamations",  ReclamationRouter);
+app.use("/api/certifs",  CertifRouter);
+
 
 
 app.get("/", (req, res) => {
