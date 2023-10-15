@@ -26,7 +26,6 @@ RequestRouter.post(
     const createRequest = await request.save();
     res.send({
       _id: createRequest._id,
-       subject: createRequest. subject,
       subject:createRequest.subject,
       description: createRequest.description,
       status :createRequest.status,
