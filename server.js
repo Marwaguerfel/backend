@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import bodyParser from 'body-parser';
 import StudentRouter from "./routers/StudentRoute.js";
+import RequestRouter from "./routers/RequestRoute.js";
 
 dotenv.config();
 
@@ -27,6 +28,8 @@ mongoose.connect('mongodb+srv://user:user@cluster0.wekkhaa.mongodb.net/?retryWri
 
 app.use(cors());
 app.use("/api/students", StudentRouter);
+app.use("/api/requests", RequestRouter);
+
 
 app.get("/", (req, res) => {
   res.send("Server is ready");
